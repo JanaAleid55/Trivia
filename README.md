@@ -97,7 +97,7 @@ curl http://127.0.0.1:5000/categories
 Returns a list of question objects, all categories, current_category, success value, and total number of questions
 Results are paginated in groups of 10. Include a request argument to choose page number, starting from 1.
 - Sample: 
-curl http://127.0.0.1:5000/questions
+curl http://127.0.0.1:5000/questions or curl 'http://127.0.0.1:5000/questions?page=1'
 ```bash
 {
   "categories": {
