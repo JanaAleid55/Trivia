@@ -175,7 +175,7 @@ Creates a new question using the submitted question, answer, category and diffic
 curl -X POST -H "Content-Type: application/json" -d '{"question":"What movie genre is The Rocker?","answer":"Comedy","category":"5","difficulty":"2"}' 'http://127.0.0.1:5000/questions?page=1'
 ```bash
 {
-  "created": 61, 
+  "created": 24, 
   "questions": [
     {
       "answer": "Brazil", 
@@ -251,7 +251,7 @@ Deletes the question of the given ID if it exists. Returns the id of the deleted
 - curl -X DELETE 'http://127.0.0.1:5000/questions/24?page=1'
 ```bash
 {
-  "deleted": 62, 
+  "deleted": 24, 
   "questions": [
     {
       "answer": "Brazil", 
