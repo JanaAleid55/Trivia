@@ -48,7 +48,7 @@ def create_app(test_config=None):
             'categories': formatted_categories
         }), 200
 
-    @app.route('/questions',  methods=['GET','OPTIONS'])
+    @app.route('/questions', methods=['GET', 'OPTIONS'])
     def get_questions():
         selection = Question.query.order_by(Question.id).all()
         current_questions = paginate_questions(request, selection)
