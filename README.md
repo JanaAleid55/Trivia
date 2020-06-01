@@ -4,6 +4,9 @@ This project is a Trivia App for everyone who look for the since of fun and chan
 By playing Trivia you are going to prove how smart you are,learn something new while having fun.
 As a part of the key features in Trivia App the user is able to display questions both all questions and by category, Delete questions, add questions,Search for questions based on search term and play the quiz game, randomizing either all questions or within a specific category. 
 
+All backend code follows [`PEP8 style guidlines`](https://www.python.org/dev/peps/pep-0008/)
+
+
 #  Guidelines
 Hello everyone! You can use this base in various workspaces and change or improve any stage, also notice that you can apply any change in the frontend section and should referene those sections for formatting your endpoints and responses, and update the frontend to match the endpoints you choose and the programmed behavior.
 
@@ -248,7 +251,8 @@ curl -X POST -H "Content-Type: application/json" -d '{"question":"What movie gen
 ### DELETE/questions/{question_id}
 - General:
 Deletes the question of the given ID if it exists. Returns the id of the deleted question, success value, total questions, and questions list based on current page number to update the frontend.
-- curl -X DELETE 'http://127.0.0.1:5000/questions/24?page=1'
+- Sample: 
+curl -X DELETE 'http://127.0.0.1:5000/questions/24?page=1'
 ```bash
 {
   "deleted": 24, 
@@ -317,7 +321,8 @@ Deletes the question of the given ID if it exists. Returns the id of the deleted
 ### POST/questions/search
 - General:
 Search about the question of the given search term if it exists. Returns the current_category, success value, total questions, and questions list based on search term.
-- curl -X POST -H "Content-Type: application/json" -d '{"search_term":"was"}' http://127.0.0.1:5000/questions/search
+- Sample:
+ curl -X POST -H "Content-Type: application/json" -d '{"search_term":"was"}' http://127.0.0.1:5000/questions/search
 ```bash
 {
   "current_category": null, 
@@ -337,7 +342,8 @@ Search about the question of the given search term if it exists. Returns the cur
 ### GET/categories/{category_id}/questions
 - General:
 Returns a list of category questions,current_category, success value, and total number of questions
-- curl http://127.0.0.1:5000/categories/1/questions
+- Sample:
+curl http://127.0.0.1:5000/categories/1/questions
 ```bash
 {
   "current_category": 1, 
@@ -364,7 +370,8 @@ Returns a list of category questions,current_category, success value, and total 
 ### POST/quizzes
 - General:
 Returns a random question within the given category, if provided, and that is not one of the previous questions, previousQuestions list,success value. 
--  curl -X POST -H "Content-Type:application/json" -d '{"quiz_category": {"type": "Art", "id": "2"},"previous_questions":[]}' http://127.0.0.1:5000/quizzes
+- Sample:
+curl -X POST -H "Content-Type:application/json" -d '{"quiz_category": {"type": "Art", "id": "2"},"previous_questions":[]}' http://127.0.0.1:5000/quizzes
 ```bash
 {
   "previousQuestions": [], 
